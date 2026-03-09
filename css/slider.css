@@ -1,0 +1,81 @@
+           element::-webkit-scrollbar {
+            display: none;
+            }
+            .element {
+        scrollbar-width: none;
+            }
+            .element {
+             -ms-overflow-style: none;
+            }
+        *{
+            font-family:"Open Sans", sans-serif;
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+      
+        .sliderCountainer{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap:20px;
+            overflow:auto;
+            padding: 0.5rem;
+        }
+          .box{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            flex-shrink: 0;
+            color: #333333;
+            gap: 8px;
+            position: relative;
+            padding:16px;
+            border-radius: 12px;
+            width: 232.5px;
+            box-shadow: #c9c2c970 3px 6px 15px 2px;
+         }
+        .imgCounatiner{  
+          text-align: center;
+        }
+        .imgCounatiner img{
+            background-color: #F9F9F9 ;
+            width: 90%;
+            vertical-align: center;
+            border-radius: 12px;
+        }
+        span.rating,.price{
+            font-weight: bold;
+        }
+        .Button{
+            display: inline-block;
+            width: 23px;
+            height: 23px;
+            text-align: center;
+            font-size: 16px;
+            color: #565656;
+            background-color: #FFFFFF;
+            border: 1px solid rgb(159, 158, 158) ;
+            border-radius: 25%;
+        }
+        .addToCartButton{
+           color: #565656;
+            background-color: #FFFFFF;
+            border: none ;       
+         }
+         .NumOfItems{
+            width:28px;
+            text-align: center;
+         }
+         .nameOfProducts{
+            font-size: 18px;
+            font-weight: 600;
+         }
+         .price{
+            font-size: 22px;
+         }
+       .addToCartButton{
+        position: absolute;
+        bottom: calc(0% + 16px);
+        right: calc(0% + 16px);
+       }
