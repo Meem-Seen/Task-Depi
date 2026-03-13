@@ -65,7 +65,6 @@
 }
 .card{
         flex-shrink: 0%;
-        border: 2px solid #333333;
         padding: 16px;
         border-radius: 10px;
        }
