@@ -32,6 +32,7 @@ body{
 }
 .pro{
     position: relative;
+    height: 370px;  
     background:white;
     border-radius:16px;
     padding:18px;
@@ -110,7 +111,11 @@ body{
 .cart-controls button:hover{
     background:#eee;
 }
-
+/* add margin to add to cart button */
+.cart{
+    margin-top: 14px;
+}
+/* end */
 .add-cart{
     background:#4CAF50;
     color:white;
