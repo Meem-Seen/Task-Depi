@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="regestration.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>FoodMart Login</title>
 </head>
@@ -15,7 +15,7 @@
                     <i class="fa-solid fa-cart-shopping"></i> 
                 </div>
                 <div class="logo_img">
-                    <img src="./assets/imgs/image.png" alt="FoodMart Logo">
+                    <img src="logo.png" alt="FoodMart Logo">
                 </div>
                 <p class="subtitle">Sign in Your Account</p>
             </div>
@@ -44,48 +44,62 @@
 
                 <div class="social_container">
                     <a href="https://accounts.google.com/signin" target="_blank" class="social_btn">
-                        <img src="./assets/imgs/google-logo.webp" alt="Google"> Google
+                        <img src="google-logo.webp" alt="Google"> Google
                     </a>
                     <a href="https://www.facebook.com/login" target="_blank" class="social_btn">
-                        <img src="./assets/imgs/facebook-logo.avif" alt="Facebook"> Facebook
+                        <img src="facebook-logo.avif" alt="Facebook"> Facebook
                     </a>
                 </div>
             </form>
         </div>
     </div>
 
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-      
-            event.preventDefault();
+ <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-            const email = document.getElementById('e_mail').value;
-            const password = document.getElementById('pass').value;
-            const errorDisplay = document.getElementById('errorMessage');
+        const email = document.getElementById('e_mail').value;
+        const password = document.getElementById('pass').value;
+        const errorDisplay = document.getElementById('errorMessage');
 
-       
-            if (!email.includes('@')) {
-                showError("The email must contain the '@' symbol.");
-                return;
-            }
+        const emailRegex = /^[a-zA-Z0-9._]+@(gmail|yahoo|outlook)\.(com|net|org)$/;
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-            if (password.length > 8) {
-                showError("Password is too long! Max 8 characters.");
-                return;
-            }
-
-           
-            errorDisplay.style.display = 'none';
-            alert("Login Successful! Welcome to FoodMart.");
-        
-        });
-
-   
-        function showError(message) {
-            const errorDisplay = document.getElementById('errorMessage');
-            errorDisplay.innerText = message;
-            errorDisplay.style.display = 'block';
+        if (!emailRegex.test(email) || !passwordRegex.test(password)) {
+            showError("Invalid Email or Password format.");
+            return;
         }
-    </script>
+
+      
+        let storedData = localStorage.getItem('Users');
+        let usersList;
+
+        if (storedData !== null) {
+            usersList = JSON.parse(storedData);
+        } else {
+            usersList = [];
+        }
+
+        const foundUser = usersList.find(user => user.email === email && user.password === password);
+
+        if (foundUser) {
+            errorDisplay.style.display = 'none';
+            alert("Login Successful! Welcome back, " + foundUser.name);
+            
+         
+            localStorage.setItem('currentUser', JSON.stringify(foundUser));
+            
+            window.location.href = "index.html"; 
+        } else {
+            showError("Email or Password incorrect, or account doesn't exist.");
+        }
+    });
+
+    function showError(message) {
+        const errorDisplay = document.getElementById('errorMessage');
+        errorDisplay.innerText = message;
+        errorDisplay.style.display = 'block';
+    }
+</script>
 </body>
 </html>

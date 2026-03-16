@@ -1,0 +1,206 @@
+:root {
+    --accent-color      : #FFC43F;
+    --accent-hover      : #e6b035;
+    --dark-color        : #222222;
+    --light-dark-color  : #727272;
+    --light-color       : #fff;
+    --grey-color        : #dbdbdb;
+    --font-main         : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+}
+
+.continar_login {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url("market_background.jpeg") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login_form {
+    background-color: var(--light-color);
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Header Styles */
+.brand_header {
+    margin-bottom: 25px;
+}
+
+.icon_box {
+    background-color: var(--accent-color);
+    color: white;
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+}
+
+.logo_img img {
+    max-width: 170px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-weight: 500;
+    color: var(--light-dark-color);
+    font-size: 0.95rem;
+}
+
+/* Form & Inputs */
+.input_group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.in_field {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--grey-color);
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s ease;
+    outline: none;
+}
+
+.in_field:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 196, 63, 0.2);
+}
+
+/* Helper Links (Remember Me & Forgot) */
+.helper_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    margin-bottom: 25px;
+}
+
+.remember_me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.remember_me input {
+    accent-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.forgot_link {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot_link:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* Main Button */
+.submit_btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.submit_btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+/* Or Divider Section */
+.or_divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: var(--light-dark-color);
+    font-size: 13px;
+}
+
+.or_divider::before, 
+.or_divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--grey-color);
+}
+
+.or_divider span {
+    padding: 0 10px;
+}
+
+/* Social Buttons Row */
+.social_container {
+    display: flex;
+    gap: 12px;
+}
+
+.social_btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid var(--grey-color);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.social_btn:hover {
+    background-color: #f9f9f9;
+    border-color: var(--light-dark-color);
+}
+
+.social_btn img {
+    width: 18px;
+    height: 18px;
+}
+.show_error{
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-bottom: 15px;
+    display: none; 
+    font-weight: 500;
+}
+
+
+
+.social_btn:hover {
+    background-color: #fff9ed;
+    border-color: var(--accent-hover); 
+}
