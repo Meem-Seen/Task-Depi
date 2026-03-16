@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/slider.css">
-  <link rel="stylesheet" href="./css/navbar.css">
-  <link
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
@@ -16,12 +16,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link rel="icon" type="image/png" href="images/icon-bread-baguette.png" />  
-</head>
-<body>
-
-<header>
-   <div class="container header_container">
+    <link rel="icon" type="image/png" href="images/icon-bread-baguette.png" />
+  </head>
+  <body>
+    <header>
+      <div class="container header_container">
         <div class="logo">
           <img src="./assets/imgs/image.png" alt="logo" />
         </div>
@@ -43,7 +42,7 @@
 
         <div class="icons">
           <div class="icon user_icon">
-          <a href="./login.html"><i class="fa-regular fa-user"> </i></a>
+            <a href="./login.html"><i class="fa-regular fa-user"> </i></a>
           </div>
 
           <div class="icon">
@@ -53,66 +52,43 @@
 
           <div class="icon">
             <i class="fa-solid fa-cart-shopping"></i>
-            <span id = "cartCounter">0</span>
+            <span id="cartCounter">0</span>
           </div>
         </div>
       </div>
     </header>
-<div class="cart_overlay" id="cartOverlay">
-  <div class="cart">
-    <div class="cart_header">
-      <h3>Your cart</h3>
-      <span class="close_cart" id="closeCart">&times;</span>
-      <span class="cart_count">3</span>
-    </div>
-    <div class="cart_items">
-      <div class="cart_item">
-        <div class="item_name">
-          <strong>Growers cider</strong>
-          <p>Brief description</p>
+    <div class="cart_overlay" id="cartOverlay">
+      <div class="cart">
+        <div class="cart_header">
+          <h3>Your cart</h3>
+          <span class="close_cart" id="closeCart">&times;</span>
         </div>
-        <div class="item_price">$8</div>
-      </div>
-      <div class="cart_item">
-        <div class="item_name">
-          <strong>Growers cider</strong>
-          <p>Brief description</p>
+        <div class="cart_items">
         </div>
-        <div class="item_price">$8</div>
-      </div>
-      <div class="cart_item">
-        <div class="item_name">
-          <strong>Growers cider</strong>
-          <p>Brief description</p>
+        <div class="cart_total">
+          <span>Total (USD)</span>
+          <span class="total_amount"></span>
         </div>
-        <div class="item_price">$8</div>
+        <!-- <button class="checkout_btn">
+          <a href="checkout">Continue to checkout</a>
+        </button> -->
       </div>
     </div>
-    <div class="cart_total">
-      <span>Total (USD)</span>
-      <span class="total_amount">$20</span>
-    </div>
-    <button class="checkout_btn"><a href="checkout">Continue to checkout</a></button>
-  </div>
-</div>
-<div class="favorites_overlay" id="favoritesOverlay">
-  <div class="favorites">
-    <div class="favorites_header">
-      <h3>Your Favorites</h3>
-      <span class="close_favorites" id="closeFavorites">&times;</span>
-      <span class="favorites_count">0</span>
-    </div>
-    <div class="favorites_items">
-      <div class="favorite_item">
-        <div class="item_name">
-          <strong>Sample Product</strong>
-          <p>Brief description</p>
+    <div class="favorites_overlay" id="favoritesOverlay">
+      <div class="favorites">
+        <div class="favorites_header">
+          <h3>Your Favorites</h3>
+          <span class="close_favorites" id="closeFavorites">&times;</span>
         </div>
-        <div class="item_price">$10</div>
+        <div class="favorites_items">
+          <div class="favorite_item">
+            <div class="item_name">
+            </div>
+            <div class="item_price"></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
     <nav class="nav">
       <div class="container">
         <ul>
@@ -122,70 +98,73 @@
         </ul>
       </div>
     </nav>
-<section class="container">
-	<div class="slider-wrapper">
-		<div class="slider">
-            <div class="card card-1" id="slide-1" >
-                                        <div class="text-container"> <p class="golden-Text">100% Natural</p>
-                                        <h3>Fresh Smoothie & Summer Juice</h3>
-                                        <p class="Dummy-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                        <a href = "#" class="shop-now-btn">
-                                         Shop Now
-                                        </a>
-                                        </div>
-                                        <div class="img-container">
-                                        <img src="./assets/imgs/product-thumb-1.png" alt="">
-                                        </div>
-                                        </div>
-            <div class="card card-1" id="slide-2" >
-                                        <div class="text-container"> <p class="golden-Text">100% Natural</p>
-                                        <h3>Fresh Smoothie & Summer Juice</h3>
-                                        <p class="Dummy-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                        <a href = "#" class="shop-now-btn">
-                                         Shop Now
-                                        </a>
-                                        </div>
-                                        <div class="img-container">
-                                        <img src="./assets/imgs/product-thumb-1.png" alt="">
-                                        </div>
-                                        </div>
-            <div class="card card-1" id="slide-3" >
-                                        <div class="text-container"> <p class="golden-Text">100% Natural</p>
-                                        <h3>Fresh Smoothie & Summer Juice</h3>
-                                        <p class="Dummy-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                        <a href = "#" class="shop-now-btn">
-                                         Shop Now
-                                        </a>
-                                        </div>
-                                        <div class="img-container">
-                                        <img src="./assets/imgs/product-thumb-1.png" alt="">
-                                        </div>
-                                        </div>
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <div class="card card-1" id="slide-1">
+            <div class="text-container">
+              <p class="golden-Text">100% Natural</p>
+              <h3>Fresh Smoothie & Summer Juice</h3>
+              <p class="Dummy-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Dignissim massa diam elementum.
+              </p>
+              <a href="#" class="shop-now-btn"> Shop Now </a>
+            </div>
+            <div class="img-container">
+              <img src="./assets/imgs/product-thumb-1.png" alt="" />
+            </div>
+          </div>
+          <div class="card card-1" id="slide-2">
+            <div class="text-container">
+              <p class="golden-Text">100% Natural</p>
+              <h3>Fresh Smoothie & Summer Juice</h3>
+              <p class="Dummy-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Dignissim massa diam elementum.
+              </p>
+              <a href="#" class="shop-now-btn"> Shop Now </a>
+            </div>
+            <div class="img-container">
+              <img src="./assets/imgs/product-thumb-1.png" alt="" />
+            </div>
+          </div>
+          <div class="card card-1" id="slide-3">
+            <div class="text-container">
+              <p class="golden-Text">100% Natural</p>
+              <h3>Fresh Smoothie & Summer Juice</h3>
+              <p class="Dummy-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Dignissim massa diam elementum.
+              </p>
+              <a href="#" class="shop-now-btn"> Shop Now </a>
+            </div>
+            <div class="img-container">
+              <img src="./assets/imgs/product-thumb-1.png" alt="" />
+            </div>
+          </div>
         </div>
-		<div class="slider-nav">
-			<a href="#slide-1"></a>
-			<a href="#slide-2"></a>
-			<a href="#slide-3"></a>
-		</div>
-	</div>
-</section>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+      </div>
+    </section>
     <div class="header">
-<h2>Products</h2>
-</div>
-<div id="products" class="products-grid"></div>
+      <h2>Products</h2>
+    </div>
+    <div id="products" class="products-grid"></div>
 
-<div id="productModal" class="modal">
+    <div id="productModal" class="modal">
+      <div class="modal-box">
+        <div id="productDetails" class="product-details"></div>
+      </div>
+    </div>
 
-  <div class="modal-box">
-
-    <div id="productDetails" class="product-details"></div>
-
-  </div>
-
-</div>
-
-<script src="assets/js/main.js"></script>
-<script src="./assets/js/navBar.js"></script>
-<script src="./assets/js/counter.js"></script>
-</body>
+    <script src="js/main.js"></script>
+    <script src="js/navBar.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
 </html>
