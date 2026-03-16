@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="regestration.css">
+    <link rel="stylesheet" href="./css/regestration.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>FoodMart Login</title>
 </head>
@@ -54,7 +54,7 @@
         </div>
     </div>
 
- <script>
+<script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -70,34 +70,27 @@
             return;
         }
 
-      
         let storedData = localStorage.getItem('Users');
-        let usersList;
-
-        if (storedData !== null) {
-            usersList = JSON.parse(storedData);
-        } else {
-            usersList = [];
-        }
+        let usersList = storedData ? JSON.parse(storedData) : [];
 
         const foundUser = usersList.find(user => user.email === email && user.password === password);
 
         if (foundUser) {
             errorDisplay.style.display = 'none';
             alert("Login Successful! Welcome back, " + foundUser.name);
-            
-         
             localStorage.setItem('currentUser', JSON.stringify(foundUser));
-            
             window.location.href = "index.html"; 
         } else {
-            showError("Email or Password incorrect, or account doesn't exist.");
+           
+            errorDisplay.innerHTML = 'Account not found. <a href="signup.html" style="color: red; text-decoration: underline;">Sign Up here</a>';
+            errorDisplay.style.display = 'block';
         }
     });
 
+   
     function showError(message) {
         const errorDisplay = document.getElementById('errorMessage');
-        errorDisplay.innerText = message;
+        errorDisplay.innerText = message; 
         errorDisplay.style.display = 'block';
     }
 </script>
