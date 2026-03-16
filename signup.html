@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regestration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>FoodMart - Create Account</title>
+</head>
+<body>
+    <div class="continar_login">
+        <div class="login_form">
+            <div class="brand_header">
+                <div class="icon_box">
+                    <i class="fa-solid fa-user-plus"></i> 
+                </div>
+                <div class="logo_img">
+                    <img src="logo.png" alt="FoodMart Logo">
+                </div>
+                <p class="subtitle">Create Your New Account</p>
+            </div>
+            
+            <form id="signupForm">
+                <div class="input_group">
+                    <input type="text" name="full_name" placeholder="Enter Your Full Name" id="full_name" class="in_field" required>
+                    
+                    <input type="email" name="e_mail" placeholder="Enter Your E-mail" id="e_mail" class="in_field" required>
+                    
+                    <input type="password" name="pasword" placeholder="Create Password" id="pass" class="in_field" required>
+                </div>
+
+                <p id="errorMessage" class="show_error"></p>
+
+                <div class="helper_links">
+                    <div class="remember_me">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms" style="font-size: 12px;">I agree to Terms & Conditions</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit_btn">Sign Up</button>
+
+                <div class="or_divider">
+                    <span>Already have an account?</span>
+                </div>
+
+                <div class="social_container">
+                    <a href="login.html" class="social_btn" style="width: 100%; border-color: var(--accent-color); color: var(--accent-color);">
+                        Sign In Instead
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('full_name').value;
+        const email = document.getElementById('e_mail').value;
+        const password = document.getElementById('pass').value;
+        const isTermsChecked = document.getElementById('terms').checked; 
+        const errorDisplay = document.getElementById('errorMessage');
+
+        const nameRegex = /^[A-Za-z\s]{2,}$/; 
+        const emailRegex = /^[a-zA-Z0-9._]+@(gmail|yahoo|outlook)\.(com|net|org)$/;
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    
+        if (!nameRegex.test(name)) {
+            showError("Name must be at least 2 characters.");
+            return;
+        }
+        if (!emailRegex.test(email)) {
+            showError("Invalid email! Use Gmail, Yahoo, or Outlook.");
+            return;
+        }
+        if (!passwordRegex.test(password)) {
+            showError("Password must be 8+ chars with letters and numbers.");
+            return;
+        }
+        if (!isTermsChecked) {
+            showError("You must agree to the terms.");
+            return;
+        }
+
+       
+        let data = localStorage.getItem('Users');
+        let usersList;
+
+        if (data !== null) {
+            usersList = JSON.parse(data); 
+        } else {
+            usersList = [];
+        }
+
+   
+        const isExist = usersList.find(u => u.email === email);
+        if (isExist) {
+            showError("This email is already registered!");
+            return;
+        }
+
+        const newUser = { name, email, password };
+        usersList.push(newUser);
+
+  
+        localStorage.setItem('Users', JSON.stringify(usersList));
+
+        alert("Welcome " + name + "! Account created.");
+        window.location.href = "login.html"; 
+    });
+
+    function showError(message) {
+        const errorDisplay = document.getElementById('errorMessage');
+        errorDisplay.innerText = message;
+        errorDisplay.style.display = 'block';
+    }
+</script>
+</html>
