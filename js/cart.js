@@ -29,8 +29,7 @@ productsContainer.addEventListener("click", function (e) {
     renderCart()
   } }
   else{
-    alert("login to add to cart");
-    window.location.href = "../login.html";
+    window.location.href = "login.html";
     }
  if(isLoggedIn()){
   if (e.target.classList.contains("favourite")) {
@@ -46,7 +45,7 @@ productsContainer.addEventListener("click", function (e) {
     renderFav()
   }}
   else{
-    alert("login to add to fav");
+    window.location.href = "login.html";
   }
 })
 
