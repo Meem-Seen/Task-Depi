@@ -37,6 +37,9 @@ body{
     box-shadow:0 5px 20px rgba(0,0,0,0.06);
     transition:all .3s ease;
 }
+.hidden{
+    display: none;
+}
 .pro:hover{
     transform:translateY(-6px);
     box-shadow:0 12px 30px rgba(0,0,0,0.12);

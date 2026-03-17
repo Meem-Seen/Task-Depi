@@ -7,6 +7,7 @@
     <title>Products Page</title>
     <link rel="stylesheet" href="./css/productsStyle.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/style.css">
         <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -40,6 +41,13 @@
             <a href="./login.html"><i class="fa-regular fa-user"> </i></a>
           </div>
 
+
+    <div class="loggedin hidden">
+        <p class="helloUser">Hello</p>
+        <button class="logout">log out</button>
+        </div>
+
+
           <div class="icon">
             <i class="fa-regular fa-heart"></i>
             <span class="fav-count">0</span>
@@ -64,9 +72,9 @@
           <span>Total (USD)</span>
           <span class="total_amount"></span>
         </div>
-        <button class="checkout_btn" >
+        <!-- <button class="checkout_btn" >
           <a href="./login.html" >Continue to ckeckout</a>
-        </button>
+        </button> -->
       </div>
     </div>
      <div class="favorites_overlay" id="favoritesOverlay">
@@ -106,6 +114,8 @@
     <script src="assets/js/productsScript.js"></script>
     <script src="./js/navBar.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/redirect.js"></script>
+  
 </body>
 </html>
 <!--products page html end -->

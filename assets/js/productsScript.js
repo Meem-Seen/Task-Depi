@@ -25,6 +25,7 @@ xhr.onload = function () {
                 <span class="favourite">♡</span>
 
                 <div class="product-image">
+
                     <img src="${product.thumbnail}" alt="${product.title}">
                     <a href="#" class="details" data-id="${product.id}">View Details</a>
                 </div>
@@ -164,4 +165,4 @@ window.onclick = function (e) {
         modal.style.display = "none";
     }
 };
-/*products page Java Script end*/ 
+/*products page Java Script end*/
