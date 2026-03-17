@@ -37,8 +37,15 @@
 
         <div class="icons">
           <div class="icon user_icon">
-            <a href="./login.html"><i class="fa-regular fa-user"> </i></a>
+            <a href="./login.html" class="login-icon"><i class="fa-regular fa-user"> </i></a>
           </div>
+
+
+        <div class="loggedin hidden">
+        <p class="helloUser">Hello</p>
+        <button class="logout">log out</button>
+        </div>
+
 
           <div class="icon">
             <i class="fa-regular fa-heart"></i>
@@ -64,9 +71,9 @@
           <span>Total (USD)</span>
           <span class="total_amount"></span>
         </div>
-        <button class="checkout_btn" >
+        <!-- <button class="checkout_btn" >
           <a href="./login.html" >Continue to ckeckout</a>
-        </button>
+        </button> -->
       </div>
     </div>
     <div class="favorites_overlay" id="favoritesOverlay">
@@ -147,16 +154,6 @@
         </div>
       </div>
     </section>
-    <div class="header">
-      <h2>Products</h2>
-    </div>
-    <div id="products" class="products-grid"></div>
-
-    <div id="productModal" class="modal">
-      <div class="modal-box">
-        <div id="productDetails" class="product-details"></div>
-      </div>
-    </div>
 <!--  test-->
 <script src="./js/redirect.js"></script>
     <script src="js/main.js"></script>

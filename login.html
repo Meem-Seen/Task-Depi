@@ -39,7 +39,7 @@
                 <button type="submit" class="submit_btn">Sign In</button>
 
                 <!-- test for sign up -->
-                <button><a href="./signup.html">Sign Up</a></button>
+                <button class="signUp"><a href="./signup.html">Sign Up</a></button>
                 <!-- end -->
 
 
@@ -84,7 +84,8 @@
             errorDisplay.style.display = 'none';
             alert("Login Successful! Welcome back, " + foundUser.name);
             localStorage.setItem('currentUser', JSON.stringify(foundUser));
-            window.location.href = "index.html"; 
+            localStorage.setItem('loginStatus', 'true');
+            window.location.href = "index.html";
         } else {
            
             errorDisplay.innerHTML = 'Account not found. <a href="signup.html" style="color: red; text-decoration: underline;">Sign Up here</a>';
