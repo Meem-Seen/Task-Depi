@@ -7,8 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products Page</title>
     <link rel="stylesheet" href="./css/productsStyle.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+        <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="images/icon-bread-baguette.png" />
 </head>
 <body>
+      <header>
+      <div class="container header_container">
+        <div class="logo">
+          <img src="./assets/imgs/image.png" alt="logo" />
+        </div>
+
+        <form class="search_box">
+         
+
+          <input type="text" placeholder="Search for products" />
+
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+        <div class="icons">
+          <div class="icon user_icon">
+            <a href="./login.html"><i class="fa-regular fa-user"> </i></a>
+          </div>
+
+          <div class="icon">
+            <i class="fa-regular fa-heart"></i>
+            <span class="fav-count">0</span>
+          </div>
+
+          <div class="icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCounter">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+      <nav class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./prodctsPage.html">Products</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
      <div class="header">
       <h2>Products</h2>
     </div>
@@ -20,6 +73,8 @@
       </div>
     </div>
     <script src="assets/js/productsScript.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 </html>
 <!--products page html end -->

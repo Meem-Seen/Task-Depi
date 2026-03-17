@@ -38,10 +38,14 @@
 
                 <button type="submit" class="submit_btn">Sign In</button>
 
+                <!-- test for sign up -->
+                <button><a href="./signup.html">Sign Up</a></button>
+                <!-- end -->
+
+
                 <div class="or_divider">
                     <span>Or continue with</span>
                 </div>
-
                 <div class="social_container">
                     <a href="https://accounts.google.com/signin" target="_blank" class="social_btn">
                         <img src="./assets/imgs/google-logo.webp" alt="Google"> Google
@@ -55,6 +59,7 @@
     </div>
 
 <script>
+  
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -94,5 +99,6 @@
         errorDisplay.style.display = 'block';
     }
 </script>
+<script src="./js/redirect.js"></script>
 </body>
 </html>
