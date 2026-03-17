@@ -1,15 +1,15 @@
+let count = 1;
 const productsContainer = document.getElementById("products")
-
 const cartItems = document.querySelector(".cart_items")
 const cartCounter = document.getElementById("cartCounter")
 const totalAmount = document.querySelector(".total_amount")
-
+const cartproductCounter = document.querySelector("#item_count")
 const favContainer = document.querySelector(".favorites_items")
 const favCounter = document.querySelector(".fav-count")
 
+
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 let favorites = JSON.parse(localStorage.getItem("favorites")) || []
-
 productsContainer.onclick = function (e) {
   if (e.target.classList.contains("add-cart")) {
     const card = e.target.closest(".pro")
@@ -48,6 +48,9 @@ function renderCart() {
 <div class="item_name">
 <strong>${item.title}</strong>
 </div>
+<div class="item_count">
+<strong>${count}</strong>
+</div>
 <div class="item_price">$${item.price}</div>
 <span class="remove_item" data-index="${index}">🗑</span>
 
@@ -67,7 +70,7 @@ cartItems.onclick = function (e) {
 function updateTotal() {
   let total = 0
   cart.forEach((item) => {
-    total += item.price
+    total += item.price * count;
   })
 
   totalAmount.innerText = "$" + total.toFixed(2)

@@ -60,7 +60,7 @@ xhr.onload = function () {
                 var counter = btn.parentElement.querySelector(".count");
                 var value = parseInt(counter.innerText);
                 counter.innerText = value + 1;
-
+                count++;
             };
 
         });
@@ -72,7 +72,10 @@ xhr.onload = function () {
                 var counter = btn.parentElement.querySelector(".count");
                 var value = parseInt(counter.innerText);
 
-                if (value > 1) counter.innerText = value - 1;
+                if (value > 1){
+                     counter.innerText = value - 1;
+                     count --;
+                }
 
             };
 
